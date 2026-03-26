@@ -30,11 +30,6 @@ def  send_alert(subject:str, message:str, priority:str = "default"):
         }
     )
 
-    if response.status_code == 200:
-        print(f"[Resend] Alert sent: {subject}", flush=True)
-    else:
-        print(f"[Resend] Failed ({response.status_code}): {response.text}", flush=True)
-
 
 record_user_details_json = {
     "name": "record_user_details",
